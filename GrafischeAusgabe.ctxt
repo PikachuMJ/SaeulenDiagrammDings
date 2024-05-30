@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=GrafischeAusgabe
+comment1.params=breite\ hoehe\ txtTitle
+comment1.target=GrafischeAusgabe(int,\ int,\ java.lang.String)
+comment1.text=\n\ Konstruktor\n
+comment2.params=nr\ farbwertHEX
+comment2.target=void\ setColor(int,\ java.lang.String)
+comment3.params=ZFl
+comment3.target=void\ paint(java.awt.Graphics)
+comment4.params=p1X\ p1Y\ p2X\ p2Y\ farbe
+comment4.target=void\ zLinie(int,\ int,\ int,\ int,\ int)
+comment5.params=p1X\ p1Y\ width\ height\ fill
+comment5.target=void\ zRechteck(int,\ int,\ int,\ int,\ int)
+comment6.params=p1X\ p1Y\ width\ fill
+comment6.target=void\ zKreis(int,\ int,\ int,\ int)
+comment7.params=p1X\ p1Y\ width\ height\ fill
+comment7.target=void\ zOval(int,\ int,\ int,\ int,\ int)
+comment8.params=s
+comment8.target=void\ ausgabeAbmessungen(java.lang.String)
+numComments=9
