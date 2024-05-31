@@ -5,7 +5,6 @@ import static javax.swing.JOptionPane.*;
  *  Da <code>JOptionPane</code> selbst eine klasse ist, und <code>showMessageDialog</code> ja nur eine methode ist, kann
  *  ich durch das importierten der statischen methoden, das <code>JOptionPane.</code> weglassen.
  *  Einfach gesagt, bin faul*/
-
 public class PRGGA3 {
     static double scale = 2;
     public static void main(String[] args) {
@@ -22,9 +21,10 @@ public class PRGGA3 {
         double avg = 0;
         double med;
         GrafischeAusgabe GA = new GrafischeAusgabe(width, height, "Ausgabefenster");
-        //Linie: x1, y1, x2, y2, farbe
-
-        // y-Achse
+        /*
+           Linie: x1, y1, x2, y2, farbe
+           y-Achse
+        */
         GA.zLinie((int) (20 * scale), (int) (275 * scale), (int) (20 * scale), (int) (50 * scale), 2);
         GA.zLinie((int) (4 * scale), (int)(250*scale), (int)(4 * scale), (int) (260 * scale), 2);
         GA.zLinie((int) (4 * scale), (int)(250*scale), (int)(1 * scale), (int) (255 * scale), 2);
@@ -37,9 +37,10 @@ public class PRGGA3 {
         //Y
         GA.zLinie((int) (5 * scale), (int) (65 * scale), (int) (10 * scale), (int) (50 * scale), 2);
         GA.zLinie((int) (7 * scale), (int) (60 * scale), (int) (2 * scale), (int) (50 * scale), 2);
-
-        //Rechteck: X, y, width, height, farbe
-        //med kasten blau
+        /*
+          Rechteck: X, y, width, height, farbe
+          med kasten blau
+        */
         GA.zRechteck((int) (150*scale), (int) (300 * scale), (int) (10*scale), (int) (10*scale), -5);
         //M
         GA.zLinie((int) (175*scale), (int) (295 * scale), (int) (175*scale), (int) (310*scale), 2);
@@ -134,7 +135,6 @@ public class PRGGA3 {
                 min = rngHeight[i];
             }
         }
-
         // Säulen
         for (int i = 0; i < 10; i++) {
             median[i] = rngHeight[i];
