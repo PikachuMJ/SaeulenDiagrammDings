@@ -1,10 +1,6 @@
 import java.util.Arrays;
 
 import static javax.swing.JOptionPane.*;
-/**  Ich habe noch median und eine Legende hinzugefügt (Ja sieht nicht so gut aus sorry).
- *  Da <code>JOptionPane</code> selbst eine klasse ist, und <code>showMessageDialog</code> ja nur eine methode ist, kann
- *  ich durch das importierten der statischen methoden, das <code>JOptionPane.</code> weglassen.
- *  Einfach gesagt, bin faul*/
 public class PRGGA3 {
     public static void main(String[] args) {
         String[] save = new String[4];
