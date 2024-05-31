@@ -6,7 +6,6 @@ import static javax.swing.JOptionPane.*;
  *  ich durch das importierten der statischen methoden, das <code>JOptionPane.</code> weglassen.
  *  Einfach gesagt, bin faul*/
 public class PRGGA3 {
-    static double scale = 2;
     public static void main(String[] args) {
         String[] save = new String[4];
         if(args.length == 4) {
@@ -17,6 +16,9 @@ public class PRGGA3 {
             save[2] = "Max: ";
             save[3] = "Min: ";
         }
+        double avg = 0;
+        double med;
+        double scale = 2;
         int[] rngHeight = new int[10];
         int[] median = new int[10];
         int gY = 275;
@@ -27,8 +29,6 @@ public class PRGGA3 {
         int answer;
         int max = 0;
         int min = 2147483647;
-        double avg = 0;
-        double med;
         GrafischeAusgabe GA = new GrafischeAusgabe(width, height, "Ausgabefenster");
         /*
            Linie: x1, y1, x2, y2, farbe
