@@ -178,12 +178,10 @@ public class PRGGA3 {
             GA.zLinie(X, (int) (275 * scale) - (int) (med * scale), X + (int) (8* scale), (int) (275 * scale) - (int) (med * scale), 5);
         }
 
-        answer = showConfirmDialog(null,
-                """
-                        Wollen sie wiederholen?
-                        Nein für Statistiken
-                        Abbrechen zum verlassen\s
-                        """);
+        String[] options = {"Wiederholen", "stats", "abbrechen"};
+        answer = showOptionDialog(null,
+                "Wiederholen, statistiken und beenden, oder abbrechen des Dialogs?","Frage",
+                YES_NO_CANCEL_OPTION,QUESTION_MESSAGE,null, options, options[0]);
         save[0] += avg/2;
         save[1] += med;
         save[2] += max;
@@ -201,8 +199,6 @@ public class PRGGA3 {
                             +save[1]+"\n"
                             +save[2]+"\n"
                             +save[3]);
-            System.exit(0);
-        }else {
             System.exit(0);
         }
     }
