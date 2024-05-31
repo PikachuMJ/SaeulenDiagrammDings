@@ -28,7 +28,7 @@ public class PRGGA3 {
         int height = (int) (350 * scale);
         int answer;
         int max = 0;
-        int min = 2147483647;
+        int min = 101;
         GrafischeAusgabe GA = new GrafischeAusgabe(width, height, "Ausgabefenster");
         /*
            Linie: x1, y1, x2, y2, farbe
