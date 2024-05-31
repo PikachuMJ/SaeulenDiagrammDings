@@ -8,6 +8,15 @@ import static javax.swing.JOptionPane.*;
 public class PRGGA3 {
     static double scale = 2;
     public static void main(String[] args) {
+        String[] save = new String[4];
+        if(args.length == 4) {
+            save = args;
+        } else {
+            save[0] = "Durchschnitt: ";
+            save[1] = "Median: ";
+            save[2] = "Max: ";
+            save[3] = "Min: ";
+        }
         int[] rngHeight = new int[10];
         int[] median = new int[10];
         int gY = 275;
@@ -141,7 +150,6 @@ public class PRGGA3 {
             avg += rngHeight[i];
             int sclHeight = rngHeight[i] * 2;
             X += (int) (40 * scale);
-            System.out.println("Säule: " + (i+1) + " höhe: " + rngHeight[i]);
             if(rngHeight[i] == max){
                 GA.zRechteck(X, (int) (275 * scale) - (int) (sclHeight * scale), (int) (20 * scale), (int) (sclHeight * scale), 4);
             } else if (rngHeight[i] == min){
@@ -153,7 +161,6 @@ public class PRGGA3 {
 
         avg = avg / 10;
         avg *= 2;
-        System.out.println("avg: " + avg / 2);
 
         X = (int)(20*scale);
         // Gestrichelte Linie für durchschnitt
@@ -164,9 +171,6 @@ public class PRGGA3 {
         //Median
         Arrays.sort(median);
         med = (median[median.length / 2 - 1] + median[median.length / 2]);
-        System.out.println("Median: " + med/2);
-        System.out.println("Max: "+max+"\n"+
-                           "Mix: "+min);
         X = (int)(10*scale);
         //Gestrichelte Linie für median
         for(int i = 0; i < 20; i++) {
@@ -175,16 +179,30 @@ public class PRGGA3 {
         }
 
         answer = showConfirmDialog(null,
-                "Durchschnitt: "+avg / 2+"\n"
-                        +"Median: "+med/2+"\n" +
-                        "Max: "+max+"\n"+
-                        "Min: "+min+"\n"+
-                        "Wollen sie nochmal laden?");
-
+                """
+                        Wollen sie wiederholen?
+                        Nein für Statistiken
+                        Abbrechen zum verlassen\s
+                        """);
+        save[0] += avg/2;
+        save[1] += med;
+        save[2] += max;
+        save[3] += min;
         if (answer == 0) {
             GA.dispose();
-            PRGGA3.main(args);
-        } else {
+            save[0] += ", ";
+            save[1] += ", ";
+            save[2] += ", ";
+            save[3] += ", ";
+            PRGGA3.main(save);
+        } else if(answer == 1){
+            showMessageDialog(null,
+                    save[0]+"\n"
+                            +save[1]+"\n"
+                            +save[2]+"\n"
+                            +save[3]);
+            System.exit(0);
+        }else {
             System.exit(0);
         }
     }
