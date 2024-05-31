@@ -21,8 +21,8 @@ public class PRGGA3 {
         double scale = 2;
         int[] rngHeight = new int[10];
         int[] median = new int[10];
-        int gY = 275;
-        int sY = (int) (gY*scale);
+        int baseY = 275;
+        int scaledY = (int) (baseY*scale);
         int X = 0;
         int width = (int) (500 * scale);
         int height = (int) (350 * scale);
@@ -120,12 +120,12 @@ public class PRGGA3 {
         for (int i = 0; i <= 100; i += 2) {
             if (i % 10 == 0 && i != 0) {
                 //Linie für 10
-                GA.zLinie((int) (15 * scale), sY, (int) (25 * scale), sY, 2);
+                GA.zLinie((int) (15 * scale), scaledY, (int) (25 * scale), scaledY, 2);
             } else if(i % 10 != 0){
                 //Linie für 2
-                GA.zLinie((int) (18 * scale), sY, (int) (22 * scale), sY, 2);
+                GA.zLinie((int) (18 * scale), scaledY, (int) (22 * scale), scaledY, 2);
             }
-            sY -= (int) (4 * scale);
+            scaledY -= (int) (4 * scale);
         }
         // Pfeile X
         GA.zLinie((int) (470 * scale), (int) (275 * scale), (int) (460 * scale), (int) (270 * scale), 2);
