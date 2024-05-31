@@ -9,6 +9,7 @@ import static javax.swing.JOptionPane.*;
 public class PRGGA3 {
     static double scale = 2;
     public static void main(String[] args) {
+        int[] rngHeight = new int[10];
         int[] median = new int[10];
         int gY = 275;
         int sY = (int) (gY*scale);
@@ -16,6 +17,8 @@ public class PRGGA3 {
         int width = (int) (500 * scale);
         int height = (int) (350 * scale);
         int answer;
+        int max = 0;
+        int min = 2147483647;
         double avg = 0;
         double med;
         GrafischeAusgabe GA = new GrafischeAusgabe(width, height, "Ausgabefenster");
@@ -35,29 +38,28 @@ public class PRGGA3 {
         GA.zLinie((int) (5 * scale), (int) (65 * scale), (int) (10 * scale), (int) (50 * scale), 2);
         GA.zLinie((int) (7 * scale), (int) (60 * scale), (int) (2 * scale), (int) (50 * scale), 2);
 
-        //med kasten blau
         //Rechteck: X, y, width, height, farbe
+        //med kasten blau
         GA.zRechteck((int) (150*scale), (int) (300 * scale), (int) (10*scale), (int) (10*scale), -5);
-        //med ausgeschrieben
         //M
         GA.zLinie((int) (175*scale), (int) (295 * scale), (int) (175*scale), (int) (310*scale), 2);
         GA.zLinie((int) (175*scale), (int) (295 * scale), (int) (180*scale), (int) (310*scale), 2);
         GA.zLinie((int) (185*scale), (int) (295 * scale), (int) (180*scale), (int) (310*scale), 2);
         GA.zLinie((int)(185*scale), (int) (295 * scale), (int) (185*scale), (int) (310*scale), 2);
-        //E
+        //e
         GA.zLinie((int)(190*scale), (int) (305*scale), (int) (195*scale), (int) (305*scale),2);
         GA.zLinie((int)(195*scale), (int) (305*scale), (int) (195*scale), (int) (301*scale),2);
         GA.zLinie((int)(190*scale), (int) (301*scale), (int) (195*scale), (int) (301*scale),2);
         GA.zLinie((int)(190*scale), (int) (310*scale), (int) (190*scale), (int) (301*scale),2);
         GA.zLinie((int)(190*scale), (int) (310*scale), (int) (195*scale), (int) (310*scale),2);
-        //D
+        //d
         GA.zLinie((int)(200*scale), (int) (310*scale), (int) (200*scale), (int) (303*scale), 2);
         GA.zLinie((int)(200*scale), (int) (310*scale), (int) (204*scale), (int) (310*scale), 2);
         GA.zLinie((int)(200*scale), (int) (303*scale), (int) (204*scale), (int) (303*scale), 2);
         GA.zLinie((int)(204*scale), (int) (310*scale), (int) (204*scale), (int) (298*scale), 2);
-        //I (hardest)
+        //i
         GA.zLinie((int)(208*scale), (int) (311*scale), (int) (208*scale), (int) (298*scale), 2);
-        GA.zRechteck((int)(207*scale), (int)(294*scale), (int)(2*scale), (int)(2*scale), -2);
+        GA.zKreis((int)(207*scale), (int)(294*scale), (int)(2*scale), -2);
         //a
         GA.zKreis((int)(211*scale), (int)(303*scale), (int)(7*scale), 2);
         GA.zLinie((int)(218*scale),(int)(310*scale), (int)(218*scale), (int)(303*scale), 2);
@@ -77,6 +79,33 @@ public class PRGGA3 {
         GA.zKreis((int)(280*scale), (int)(303*scale), (int)(7*scale), 2);
         GA.zLinie((int)(287*scale),(int)(313*scale), (int)(287*scale), (int)(303*scale), 2);
         GA.zLinie((int)(280*scale),(int)(313*scale), (int)(287*scale), (int)(313*scale), 2);
+        //Max rechteck
+        GA.zRechteck((int) (150*scale), (int) (320 * scale), (int) (10*scale), (int) (10*scale), -4);
+        //M
+        GA.zLinie((int) (175*scale), (int) (315 * scale), (int) (175*scale), (int) (330*scale), 2);
+        GA.zLinie((int) (175*scale), (int) (315 * scale), (int) (180*scale), (int) (330*scale), 2);
+        GA.zLinie((int) (185*scale), (int) (315 * scale), (int) (180*scale), (int) (330*scale), 2);
+        GA.zLinie((int)(185*scale), (int) (315 * scale), (int) (185*scale), (int) (330*scale), 2);
+        //a
+        GA.zKreis((int)(188*scale), (int)(322*scale), (int)(7*scale), 2);
+        GA.zLinie((int)(195*scale),(int)(329*scale), (int)(195*scale), (int)(322*scale), 2);
+        //x
+        GA.zLinie((int) (198 * scale), (int) (320 * scale), (int) (203 * scale), (int) (330 * scale), 2);
+        GA.zLinie((int) (203 * scale), (int) (320 * scale), (int) (198 * scale), (int) (330 * scale), 2);
+        //Min rechteck
+        GA.zRechteck((int) (240*scale), (int) (320 * scale), (int) (10*scale), (int) (10*scale), -7);
+        //M
+        GA.zLinie((int) (255*scale), (int) (320 * scale), (int) (255*scale), (int) (330*scale), 2);
+        GA.zLinie((int) (255*scale), (int) (320 * scale), (int) (260*scale), (int) (330*scale), 2);
+        GA.zLinie((int) (265*scale), (int) (320 * scale), (int) (260*scale), (int) (330*scale), 2);
+        GA.zLinie((int) (265*scale), (int) (320 * scale), (int) (265*scale), (int) (330*scale), 2);
+        //i
+        GA.zLinie((int)(270*scale), (int) (330*scale), (int) (270*scale), (int) (322*scale), 2);
+        GA.zKreis((int)(269*scale), (int)(318*scale), (int)(2*scale), -2);
+        //n
+        GA.zLinie((int)(273*scale),(int)(330*scale),(int)(273*scale),(int)(323*scale),2);
+        GA.zLinie((int)(273*scale),(int)(323*scale),(int)(277*scale),(int)(323*scale),2);
+        GA.zLinie((int)(277*scale),(int)(330*scale),(int)(277*scale),(int)(323*scale),2);
         // Höhe verbildlichen
         for (int i = 0; i <= 100; i += 2) {
             if (i % 10 == 0 && i != 0) {
@@ -96,15 +125,30 @@ public class PRGGA3 {
         GA.zLinie((int) (20 * scale), (int) (50 * scale), (int) (15 * scale), (int) (60 * scale), 2);
         GA.zLinie((int) (20 * scale), (int) (50 * scale), (int) (25 * scale), (int) (60 * scale), 2);
 
+        for(int i = 0; i < 10; i++) {
+            rngHeight[i] = (int) (Math.random() * 100) + 1;
+            if(rngHeight[i] > max){
+                max = rngHeight[i];
+            }
+            if(rngHeight[i] < min){
+                min = rngHeight[i];
+            }
+        }
+
         // Säulen
         for (int i = 0; i < 10; i++) {
-            int rngHeight = (int) (Math.random() * 100) + 1;
-            median[i] = rngHeight;
-            avg += rngHeight;
-            int sclHeight = rngHeight * 2;
+            median[i] = rngHeight[i];
+            avg += rngHeight[i];
+            int sclHeight = rngHeight[i] * 2;
             X += (int) (40 * scale);
-            System.out.println("Säule: " + (i+1) + " höhe: " + rngHeight);
-            GA.zRechteck(X, (int) (275 * scale) - (int) (sclHeight * scale), (int) (20 * scale), (int) (sclHeight * scale), 2);
+            System.out.println("Säule: " + (i+1) + " höhe: " + rngHeight[i]);
+            if(rngHeight[i] == max){
+                GA.zRechteck(X, (int) (275 * scale) - (int) (sclHeight * scale), (int) (20 * scale), (int) (sclHeight * scale), 4);
+            } else if (rngHeight[i] == min){
+                GA.zRechteck(X, (int) (275 * scale) - (int) (sclHeight * scale), (int) (20 * scale), (int) (sclHeight * scale), 7);
+            }else {
+                GA.zRechteck(X, (int) (275 * scale) - (int) (sclHeight * scale), (int) (20 * scale), (int) (sclHeight * scale), 2);
+            }
         }
 
         avg = avg / 10;
@@ -121,6 +165,8 @@ public class PRGGA3 {
         Arrays.sort(median);
         med = (median[median.length / 2 - 1] + median[median.length / 2]);
         System.out.println("Median: " + med/2);
+        System.out.println("Max: "+max+"\n"+
+                           "Mix: "+min);
         X = (int)(10*scale);
         //Gestrichelte Linie für median
         for(int i = 0; i < 20; i++) {
@@ -129,7 +175,11 @@ public class PRGGA3 {
         }
 
         answer = showConfirmDialog(null,
-                "Durchschnitt: "+avg / 2+"\n"+"Median: "+med/2+"\nWollen sie nochmal laden?");
+                "Durchschnitt: "+avg / 2+"\n"
+                        +"Median: "+med/2+"\n" +
+                        "Max: "+max+"\n"+
+                        "Min: "+min+"\n"+
+                        "Wollen sie nochmal laden?");
 
         if (answer == 0) {
             GA.dispose();

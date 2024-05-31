@@ -59,9 +59,6 @@ public class GrafischeAusgabe extends JFrame{
         farben[10]=Color.ORANGE;
         farben[11]=Color.LIGHT_GRAY;
         farben[12]=Color.DARK_GRAY;
-        farben[13]=Color.BLACK;
-        farben[14]=Color.BLACK;
-        farben[15]=Color.BLACK;     
     }
 
     /**Zeichnen Methode des Hauptfensters. Wird vom System aufgerufen, wenn das Fenster
