@@ -173,7 +173,7 @@ public class PRGGA3 {
             X += (int) (20 * scale);
             GA.zLinie(X, (int) (275 * scale) - (int) (med * scale), X + (int) (8* scale), (int) (275 * scale) - (int) (med * scale), 5);
         }
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         String[] options = {"Wiederholen", "stats"};
         answer = showOptionDialog(null,
                 "Wiederholen order stats?","Frage",
