@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 import static javax.swing.JOptionPane.*;
 public class PRGGA3 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         String[] save = new String[4];
         if(args.length == 4) {
             save = args;
@@ -173,10 +173,10 @@ public class PRGGA3 {
             X += (int) (20 * scale);
             GA.zLinie(X, (int) (275 * scale) - (int) (med * scale), X + (int) (8* scale), (int) (275 * scale) - (int) (med * scale), 5);
         }
-
-        String[] options = {"Wiederholen", "beenden"};
+        Thread.sleep(2000);
+        String[] options = {"Wiederholen", "stats"};
         answer = showOptionDialog(null,
-                "Wiederholen, oder beenden?","Frage",
+                "Wiederholen order stats?","Frage",
                 YES_NO_CANCEL_OPTION,QUESTION_MESSAGE,null, options, options[0]);
         save[0] += avg/2;
         save[1] += med;
