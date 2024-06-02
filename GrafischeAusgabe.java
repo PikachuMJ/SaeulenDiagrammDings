@@ -45,7 +45,7 @@ public class GrafischeAusgabe extends JFrame{
         //ausgabeAbmessungen("Konstruktor:45");
         farbeHintergrund=Color.white;
         farbeVordergrund=Color.black;
-        farben = new Color[16];
+        farben = new Color[13];
         farben[0]=farbeVordergrund;
         farben[1]=Color.WHITE;
         farben[2]=Color.BLACK;
