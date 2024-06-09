@@ -22,6 +22,9 @@ public class GrafischeAusgabe extends JFrame{
     private int[][] rechtecke;
     private int[][] kreise;
     private boolean firstPaint=true;    //Merker für den ersten Aufruf der paint Methode
+    private final String[] wordsToDraw = new String[4];
+    private final int[] xPositions = new int[4];
+    private final int[] yPositions = new int[4];
     /**
      * Konstruktor
      */
@@ -60,7 +63,16 @@ public class GrafischeAusgabe extends JFrame{
         farben[11]=Color.LIGHT_GRAY;
         farben[12]=Color.DARK_GRAY;
     }
-
+    public void drawWords(String word, int x, int y) {
+        for (int i = 0; i < wordsToDraw.length; i++) {
+            if (wordsToDraw[i] == null) {
+                wordsToDraw[i] = word;
+                xPositions[i] = x;
+                yPositions[i] = y;
+                break;
+            }
+        }
+    }
     /**Zeichnen Methode des Hauptfensters. Wird vom System aufgerufen, wenn das Fenster
     *angezeigt oder verändert wird (jedes Mal!!!)
     *Sie bekommt als Parameter die Zeichenfläche ZFl auf der gezeichnet werden kann*/
@@ -114,6 +126,11 @@ public class GrafischeAusgabe extends JFrame{
                     ZFl.fillOval(kreise[0][i]+orgX, kreise[1][i]+orgY, kreise[2][i], kreise[3][i]);
                 }
                 ZFl.setColor(farbeVordergrund);
+            }
+        }
+        for (i = 0; i < wordsToDraw.length; i++) {
+            if (wordsToDraw[i] != null) {
+                ZFl.drawChars(wordsToDraw[i].toCharArray(), 0, wordsToDraw[i].length(), xPositions[i], yPositions[i]);
             }
         }
     }

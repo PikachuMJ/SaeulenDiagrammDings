@@ -47,71 +47,16 @@ public class PRGGA3 {
           med kasten blau
         */
         GA.zRechteck((int) (150*scale), (int) (300 * scale), (int) (10*scale), (int) (10*scale), -5);
-        //M
-        GA.zLinie((int) (175*scale), (int) (295 * scale), (int) (175*scale), (int) (310*scale), 2);
-        GA.zLinie((int) (175*scale), (int) (295 * scale), (int) (180*scale), (int) (310*scale), 2);
-        GA.zLinie((int) (185*scale), (int) (295 * scale), (int) (180*scale), (int) (310*scale), 2);
-        GA.zLinie((int)(185*scale), (int) (295 * scale), (int) (185*scale), (int) (310*scale), 2);
-        //e
-        GA.zLinie((int)(190*scale), (int) (305*scale), (int) (195*scale), (int) (305*scale),2);
-        GA.zLinie((int)(195*scale), (int) (305*scale), (int) (195*scale), (int) (301*scale),2);
-        GA.zLinie((int)(190*scale), (int) (301*scale), (int) (195*scale), (int) (301*scale),2);
-        GA.zLinie((int)(190*scale), (int) (310*scale), (int) (190*scale), (int) (301*scale),2);
-        GA.zLinie((int)(190*scale), (int) (310*scale), (int) (195*scale), (int) (310*scale),2);
-        //d
-        GA.zLinie((int)(200*scale), (int) (310*scale), (int) (200*scale), (int) (303*scale), 2);
-        GA.zLinie((int)(200*scale), (int) (310*scale), (int) (204*scale), (int) (310*scale), 2);
-        GA.zLinie((int)(200*scale), (int) (303*scale), (int) (204*scale), (int) (303*scale), 2);
-        GA.zLinie((int)(204*scale), (int) (310*scale), (int) (204*scale), (int) (298*scale), 2);
-        //i
-        GA.zLinie((int)(208*scale), (int) (311*scale), (int) (208*scale), (int) (298*scale), 2);
-        GA.zKreis((int)(207*scale), (int)(294*scale), (int)(2*scale), -2);
-        //a
-        GA.zKreis((int)(211*scale), (int)(303*scale), (int)(7*scale), 2);
-        GA.zLinie((int)(218*scale),(int)(310*scale), (int)(218*scale), (int)(303*scale), 2);
-        //n
-        GA.zLinie((int)(222*scale),(int)(311*scale),(int)(222*scale),(int)(302*scale),2);
-        GA.zLinie((int)(222*scale),(int)(302*scale),(int)(226*scale),(int)(302*scale),2);
-        GA.zLinie((int)(226*scale),(int)(311*scale),(int)(226*scale),(int)(302*scale),2);
+        GA.drawWords("Median", (int) (165 * scale), (int) (325 * scale));
         //avg kasten rot
         GA.zRechteck((int) (240*scale), (int) (300 * scale), (int) (10*scale), (int) (10*scale), -3);
-        //a
-        GA.zKreis((int)(260*scale), (int)(303*scale), (int)(7*scale), 2);
-        GA.zLinie((int)(267*scale),(int)(310*scale), (int)(267*scale), (int)(303*scale), 2);
-        //v
-        GA.zLinie((int)(274*scale),(int)(310*scale), (int)(271*scale), (int)(303*scale), 2);
-        GA.zLinie((int)(274*scale),(int)(310*scale), (int)(277*scale), (int)(303*scale), 2);
-        //g
-        GA.zKreis((int)(280*scale), (int)(303*scale), (int)(7*scale), 2);
-        GA.zLinie((int)(287*scale),(int)(313*scale), (int)(287*scale), (int)(303*scale), 2);
-        GA.zLinie((int)(280*scale),(int)(313*scale), (int)(287*scale), (int)(313*scale), 2);
+        GA.drawWords("Durchschnitt", (int) (255 * scale), (int) (325 * scale));
         //Max rechteck
         GA.zRechteck((int) (150*scale), (int) (320 * scale), (int) (10*scale), (int) (10*scale), -4);
-        //M
-        GA.zLinie((int) (175*scale), (int) (315 * scale), (int) (175*scale), (int) (330*scale), 2);
-        GA.zLinie((int) (175*scale), (int) (315 * scale), (int) (180*scale), (int) (330*scale), 2);
-        GA.zLinie((int) (185*scale), (int) (315 * scale), (int) (180*scale), (int) (330*scale), 2);
-        GA.zLinie((int)(185*scale), (int) (315 * scale), (int) (185*scale), (int) (330*scale), 2);
-        //a
-        GA.zKreis((int)(188*scale), (int)(322*scale), (int)(7*scale), 2);
-        GA.zLinie((int)(195*scale),(int)(329*scale), (int)(195*scale), (int)(322*scale), 2);
-        //x
-        GA.zLinie((int) (198 * scale), (int) (320 * scale), (int) (203 * scale), (int) (330 * scale), 2);
-        GA.zLinie((int) (203 * scale), (int) (320 * scale), (int) (198 * scale), (int) (330 * scale), 2);
+        GA.drawWords("Max", (int) (165 * scale), (int) (345 * scale));
         //Min rechteck
         GA.zRechteck((int) (240*scale), (int) (320 * scale), (int) (10*scale), (int) (10*scale), -7);
-        //M
-        GA.zLinie((int) (255*scale), (int) (320 * scale), (int) (255*scale), (int) (330*scale), 2);
-        GA.zLinie((int) (255*scale), (int) (320 * scale), (int) (260*scale), (int) (330*scale), 2);
-        GA.zLinie((int) (265*scale), (int) (320 * scale), (int) (260*scale), (int) (330*scale), 2);
-        GA.zLinie((int) (265*scale), (int) (320 * scale), (int) (265*scale), (int) (330*scale), 2);
-        //i
-        GA.zLinie((int)(270*scale), (int) (330*scale), (int) (270*scale), (int) (322*scale), 2);
-        GA.zKreis((int)(269*scale), (int)(318*scale), (int)(2*scale), -2);
-        //n
-        GA.zLinie((int)(273*scale),(int)(330*scale),(int)(273*scale),(int)(323*scale),2);
-        GA.zLinie((int)(273*scale),(int)(323*scale),(int)(277*scale),(int)(323*scale),2);
-        GA.zLinie((int)(277*scale),(int)(330*scale),(int)(277*scale),(int)(323*scale),2);
+        GA.drawWords("Min", (int) (255 * scale), (int) (345 * scale));
         // Höhe verbildlichen
         for (int i = 0; i <= 100; i += 2) {
             if (i % 10 == 0 && i != 0) {
