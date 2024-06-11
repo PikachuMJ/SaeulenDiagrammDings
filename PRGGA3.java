@@ -31,9 +31,9 @@ public class PRGGA3 {
            y-Achse
         */
         GA.zLinie((int) (20 * scale), (int) (275 * scale), (int) (20 * scale), (int) (50 * scale), 2);
-        GA.zLinie((int) (4 * scale), (int)(250*scale), (int)(4 * scale), (int) (260 * scale), 2);
-        GA.zLinie((int) (4 * scale), (int)(250*scale), (int)(1 * scale), (int) (255 * scale), 2);
-        GA.zOval((int)(5*scale),(int)(250*scale), 13, (int)(20*(scale/2)),2);
+
+        GA.drawWords("100",(int) (3 * scale), (int) (95*scale));
+        GA.drawWords("10", (int) (3 * scale), (int) (275*scale));
         // x-Achse
         GA.zLinie((int) (20 * scale), (int) (275 * scale), (int) (470 * scale), (int) (275 * scale), 2);
         //X
@@ -121,7 +121,7 @@ public class PRGGA3 {
         Thread.sleep(2000);
         String[] options = {"Wiederholen", "stats"};
         answer = showOptionDialog(null,
-                "Wiederholen order stats?","Frage",
+                "Wiederholen oder stats?","Frage",
                 YES_NO_CANCEL_OPTION,QUESTION_MESSAGE,null, options, options[0]);
         save[0] += avg/2;
         save[1] += med;

@@ -22,9 +22,9 @@ public class GrafischeAusgabe extends JFrame{
     private int[][] rechtecke;
     private int[][] kreise;
     private boolean firstPaint=true;    //Merker für den ersten Aufruf der paint Methode
-    private final String[] wordsToDraw = new String[4];
-    private final int[] xPositions = new int[4];
-    private final int[] yPositions = new int[4];
+    private final String[] wordsToDraw = new String[6];
+    private final int[] xPositions = new int[6];
+    private final int[] yPositions = new int[6];
     /**
      * Konstruktor
      */
